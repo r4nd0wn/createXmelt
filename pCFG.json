@@ -1,0 +1,32 @@
+{
+	"email": {
+		"domain": "yourname.sag.tools",
+		"inbox": "yourname@yourname.sag.tools",
+		"password": "password",
+		"port": 143,
+		"tls": false,
+		"method": "imap",
+		"httpService": {
+			"domain": "inboxkitten.com"
+		}
+	},
+	"captcha": {
+		"apikey": "captchaninjaapikey",
+		"version": "v2"
+	},
+	"proxy": {
+		"enabled": true,
+		"getproxylist": {
+			"apikey": "606736640e23ae7fd80e3d26dce1c548940951a2"
+		},
+		"threshold": 5,
+		"method": "api",
+		"fileName": "proxy_list.txt"
+	},
+	"account": {
+		"free_licenses": [730, 570],
+		"create_login_batch": false
+	},
+	"totalAccountToBeCreate": 2000,
+	"usernamePasswordFile": "username_password.txt"
+}

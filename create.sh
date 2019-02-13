@@ -1,16 +1,16 @@
-#!/bin/bash
+#!bin/bash
 
-echo "how many instanced do you want to create?"
-read amount
-for i in `seq 1 $amount`;
-    do
-        echo Creating directory $i
-        mkdir God$i
-        cp -r God/* God$i
-        cd God$i
-        pm2 start GODLY.js
-        cd ..
-    done   
-echo "succesfully created and started $amount instances"
-exit
+echo "please make shure your domain is in that scheme: subsub[raisingNumber.subdomain.sag.tools"
+
+
+read -r -p "Type in the absolute path to the installed directory" path
+
+read -r -p "Whats the name of your first sag.tools subdomain?" sub
+read -r -p "Whats the name of your subsub domain?" subsub
+read -r -p "Whats the name of your E-Mail Prefix" Prefix
+read -r -p "Type in your password" password
+read -r -p "Type in your api key" apikey
+read -r -p "Type in the totalAccount to Create" totalAccount
+cd $path
+
 

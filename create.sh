@@ -51,6 +51,6 @@ for i in `seq 0 $amount`;
 			},
 			\"totalAccountToBeCreate\": 2000,
 			\"usernamePasswordFile\": \"username_password.txt\"
-		}"
+		}" > GODLY/pCFG.json
     done   
 exit

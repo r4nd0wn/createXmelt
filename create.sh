@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo "please make shure your domain is in that scheme: subsub[raisingNumber.subdomain.sag.tools"
 
@@ -16,12 +16,13 @@ mkdir ../instances
 
 
 for i in `seq 0 $amount`;
-    do
-    	mkdir ../instances/$i
-    	cp -r ./* ../instances/$i
-    	cd ../instances/$i/
-    	echo "{
-    		\"email\": {
+	do
+		cd ../instances/
+		mkdir gen$i
+		cp -r $path/* gen$i/
+		cd gen$i/
+		echo "{
+			\"email\": {
 				\"domain\": \"$sub.sag.tools\",
 				\"inbox\": \"$Prefix@$subsub$i$sub.sag.tools\",
 				\"password\": \"$password\",
@@ -52,5 +53,7 @@ for i in `seq 0 $amount`;
 			\"totalAccountToBeCreate\": 2000,
 			\"usernamePasswordFile\": \"username_password.txt\"
 		}" > GODLY/pCFG.json
-    done   
+		pm2 start GODLY.js
+		cd $path
+	done   
 exit

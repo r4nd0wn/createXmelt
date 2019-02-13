@@ -65,10 +65,10 @@ then
 	if [[ "$responsepm2" =~ ^([yY][eE][sS]|[yY])+$ ]]
 	then
 	    echo "starting the Generator with pm2."
-	    pm2 start -i 20 GODLY.js
+	    pm2 start -i 20 GODLY.js --cron "*/30 * * * *"
 	else
 	    npm install pm2
-	    pm2 start -i 20 GODLY.js
+	    pm2 start -i 20 GODLY.js --cron "*/30 * * * *"
 	fi
 else
     exit

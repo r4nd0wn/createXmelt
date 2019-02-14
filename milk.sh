@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Script by r4nd0wn#8056"
+echo "Idea with the account counter by Kewaii#3167"
 echo "how many instances do you want to milk?"
 read amount
 echo "milking $amount instances"

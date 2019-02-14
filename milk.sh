@@ -1,10 +1,12 @@
 #!/bin/bash
 
-echo "milking 20 instances"
+echo "how many instances do you want to milk?"
+read amount
+echo "milking $amount instances"
 oldQty=0
 qty=($(wc -l all.txt))
 oldQty=qty
-for i in `seq 1 20`;
+for i in `seq 1 $amount`;
     do
         echo milking directory $i
         cd God$i
@@ -17,4 +19,3 @@ difference=$((newQty - oldQty))
 echo you milked $difference accounts.
 echo Your all.txt now contains $newQty accounts.
 exit
-

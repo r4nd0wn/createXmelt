@@ -1,14 +1,20 @@
 #!/bin/bash
 
-echo "how many instanced do you want to create?"
-read amount
-for i in `seq 1 $amount`;
+echo "milking 20 instances"
+oldQty=0
+qty=($(wc -l all.txt))
+oldQty=qty
+for i in `seq 1 20`;
     do
-        echo melting directory $i
+        echo milking directory $i
         cd God$i
-	cat accounts.txt >> ../all.txt
-	rm accounts.txt
+	cat username_password.txt >> ../all.txt
+	rm username_password.txt
         cd ..
-    done   
+    done
+newQty=($(wc -l all.txt))
+difference=$((newQty - oldQty))
+echo you milked $difference accounts.
+echo Your all.txt now contains $newQty accounts.
 exit
 

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Script by r4nd0wn#8056"
 echo "how many instanced do you want to create?"
 read amount
 echo "please give the absolut path to the GODLY directory"

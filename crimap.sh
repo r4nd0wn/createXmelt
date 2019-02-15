@@ -56,3 +56,4 @@ for i in `seq 0 $amount`;
 		pm2 start GODLY.js
 		cd $path
 	done   
+exit

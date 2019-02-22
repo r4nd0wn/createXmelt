@@ -11,7 +11,7 @@ oldQty=qty
 for i in `seq 1 $amount`;
     do
         echo milking directory $i
-        cd God$i
+        cd gen$i
 	cat username_password.txt >> ../all.txt
 	rm username_password.txt
         cd ..
